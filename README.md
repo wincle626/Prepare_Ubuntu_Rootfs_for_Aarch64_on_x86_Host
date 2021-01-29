@@ -38,11 +38,29 @@ passwd udrc
 
 passwd root
 
-## 9. Exit the new rootfs system
+## 9. (Optional) Static IP addres
+
+Answer 'no' to 'sudo dpkg-reconfigure resolvconf'. This is to set static configuration for /etc/resolv.conf file.
+
+echo 'nameserver 10.42.0.1' > /etc/resolv.conf
+
+echo 'eth0' > /etc/network/interfaces.d/eth0
+
+echo 'iface eth0 net static' >> /etc/network/interfaces.d/eth0
+
+echo 'address 10.42.0.106' >> /etc/network/interfaces.d/eth0
+
+echo 'netmask 255.255.255.0' >> /etc/network/interfaces.d/eth0
+
+echo 'gateway 10.42.0.1' >> /etc/network/interfaces.d/eth0
+
+echo 'dns-nameservers 10.42.0.1' >> /etc/network/interfaces.d/eth0
+
+## 10. Exit the new rootfs system
 
 exit
 
-## 9. (Optional) Make rootfs image
+## 11. (Optional) Make rootfs image
 
 dd if=/dev/zero of=ubuntu_20.4_rootfs.img bs=1M count=2048
 
