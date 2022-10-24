@@ -24,11 +24,11 @@ sudo chroot tmp
 
 ## 6. Update and upgrade packages
 
-sudo update && sudo upgrade -y
+apt update && apt upgrade -y
 
 ## 7. Install necessary packages
 
-sudo apt install sudo ifupdown net-tools network-manager udev sudo ssh vim resolvconf
+apt install sudo ifupdown net-tools network-manager udev sudo ssh vim resolvconf
 
 ## 8. Add user and password
 
