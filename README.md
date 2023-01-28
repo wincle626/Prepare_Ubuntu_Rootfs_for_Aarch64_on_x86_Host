@@ -8,7 +8,7 @@ sudo apt install qemu qemu-user-static binfmt-support debootstrap
 
 wget http://cdimage.ubuntu.com/ubuntu-base/releases/20.04/release/ubuntu-base-20.04.1-base-arm64.tar.gz
 
-unzip -xzvf ubuntu-base-20.04.1-base-arm64.tar.gz tmp
+tar -xzvf ubuntu-base-20.04.1-base-arm64.tar.gz tmp
 
 ## 3. Prepare network configuration
 
